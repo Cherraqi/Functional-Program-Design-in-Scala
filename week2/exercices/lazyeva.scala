@@ -22,8 +22,8 @@ object lazyeva {
  	expr                                    
 
 	/** Testing MyLazyStream **/
-	def streamRange(lo: Int, hi: Int): MyLazyStream[Int] = {
-		if(lo >= hi) MyLazyStream.empty
+	def streamRange(lo: Int, hi: Int): MStream[Int] = {
+		if(lo >= hi) MStream.empty
 		else MyLazyStream.cons(lo, streamRange(lo + 1, hi))
 	}                                         
 	def isOdd = (x: Int) => x % 2 == 1       
